@@ -56,8 +56,13 @@ public class Picture {
         this.maxUse = -1;
         this.used = -1;
         this.aquiredThrough = "?";
-        this.publishings = new Publishing[0];
-        this.keywords = new String[0];
+        Publishing publishing = new Publishing(-1, "?", "?", "?", "?");
+        Publishing[] initializerP = {publishing};
+        this.publishings = initializerP;
+//        this.publishings = new Publishing[0];
+        String[] initializerS = {"?"};
+        this.keywords = initializerS;
+//        this.keywords = new String[0];
     }
     
     
