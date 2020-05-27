@@ -19,6 +19,7 @@ public class Publishing {
 
     
     
+    
     public Publishing(int puNo, String date, String title, String fName, String lName) {
         this.puNo = puNo;
         this.date = date;
@@ -27,22 +28,27 @@ public class Publishing {
         this.lName = lName;
     }
 
+    
     public int getPuNo() {
         return puNo;
     }
 
+    
     public String getDate() {
         return date;
     }
 
+    
     public String getTitle() {
         return title;
     }
 
+    
     public String getfName() {
         return fName;
     }
 
+    
     public String getlName() {
         return lName;
     }

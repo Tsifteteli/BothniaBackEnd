@@ -51,11 +51,11 @@ public class PicturesAPI implements ContainerResponseFilter {
             "GET, POST, PUT, DELETE, OPTIONS, HEAD");
     }
 
+    
     /**
      * Creates a new instance of PicturesAPI
      */
-    public PicturesAPI() {
-    }
+    public PicturesAPI() {}
 
 
     @GET
@@ -70,24 +70,18 @@ public class PicturesAPI implements ContainerResponseFilter {
     }
 
 
+    // Tar en String som är nyckleorden separerade med _
     @Path("pictures")
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPictures(@QueryParam("search") String search) {
         
-//        PictureController pc = new PictureController();
-//        
-//        Picture[] p = pc.getPictures(search);
-
-
-// Ta en String som är nyckleorden separerade med _
-// Gör metod för att separera ut respektive ord och lägg i Arraylist
-//Gör lop som gör en sökning för avrje ord i listan och lägger respektive resultat i var sin Arraylist
-//Samt lägger varje nytt piNo i en totallista och räknar upp en counter för varje gång den inträffar
-//Kolla igenom total-arraylisten efter de bilder som komm med i samtliga sökord (-1) - Ska vi ha sätt för att markera om de är alla eller -1?
-//Returnera array med picture-objekt
-
+        PictureController pc = new PictureController();
         
-        return Response.ok(search).build();
+        Picture[] p = pc.getPictures(search);
+
+        return Response.ok(p).build();
     }
+    
+    
 }
